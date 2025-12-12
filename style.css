@@ -1,0 +1,99 @@
+body{
+    margin: 0;padding: 0;
+ 
+}
+h1{
+    font-size:50px;
+    text-align: center;
+    margin: 50px auto 100px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #434989;
+
+}
+.height , .weight{
+width: 25%;
+padding: 20px;
+font-size: large;
+border: none;
+outline: 2px solid transparent;
+border-radius: 10px;
+margin-bottom: 50px;
+background-color: #dfe0e5;
+text-align: center;
+
+
+}
+.height:focus ,.weight:focus{
+transition: outline-color ease-in 300ms;
+outline-color: #276fbf;
+
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.calculate{
+    height: 3rem;
+    width: 10%;
+   background-color: #724cf9;
+   color: white;
+   border: none;
+   border-radius: 5px;
+  cursor: pointer;
+   font-size: large;
+}
+.calculate:active{
+    width:9.9%;
+    height: 2.95rem;
+}
+.result{
+    text-align: center;
+    margin: 60px auto;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  font-size: larger;
+  display: none;
+}
+.result span{
+
+ color: red;
+    font-weight: bold;
+    font-size: x-large;
+}
+.health{
+    font-size: larger;
+    margin: 30px 5%;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width:760px) {
+  .height , .weight{
+        font-size: small;
+    }
+    .calculate{
+        width: 30vw;
+    }
+    
+}
+@media screen and (max-width:560px){
+    .inputs{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+   .height , .weight{
+    width: 100%;
+   }
+}
