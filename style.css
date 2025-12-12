@@ -1,99 +1,203 @@
-body{
-    margin: 0;padding: 0;
- 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1{
-    font-size:50px;
+
+.themes {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+.light {
+    background: white;
+    color: black;
+}
+
+.dark {
+    background: black;
+    color: white;
+
+    .weight {
+        background: #1e1e1e;
+        color: white;
+
+    }
+
+    .height {
+        background: #1e1e1e;
+        color: white;
+    }
+
+    .themes {
+        background-color: blue;
+    }
+
+}
+
+.themes {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+
+}
+
+h1 {
+    font-size: 50px;
     text-align: center;
-    margin: 50px auto 100px auto;
+    margin: 50px auto 70px auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-.inputs{
+.inputs {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: #434989;
 
 }
-.height , .weight{
-width: 25%;
-padding: 20px;
-font-size: large;
-border: none;
-outline: 2px solid transparent;
-border-radius: 10px;
-margin-bottom: 50px;
-background-color: #dfe0e5;
-text-align: center;
 
+.height,
+.weight {
+    width: 25%;
+    padding: 20px;
+    font-size: large;
+    border: none;
+    outline: 2px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: #dfe0e5;
+}
+
+.bg {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.height:focus,
+.weight:focus {
+    transition: outline-color ease-in 300ms;
+    outline-color: #276fbf;
 
 }
-.height:focus ,.weight:focus{
-transition: outline-color ease-in 300ms;
-outline-color: #276fbf;
 
-}
-.button{
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
-.calculate{
+
+.calculate {
     height: 3rem;
-    width: 10%;
-   background-color: #724cf9;
-   color: white;
-   border: none;
-   border-radius: 5px;
-  cursor: pointer;
-   font-size: large;
+    width: 18vw;
+    background-color: #724cf9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
 }
-.calculate:active{
-    width:9.9%;
+
+.calculate:active {
+    width: 17.5vw;
     height: 2.95rem;
 }
-.result{
+
+.result {
     text-align: center;
     margin: 60px auto;
-    display: flex;   
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-  font-size: larger;
-  display: none;
+    font-size: larger;
+    display: none;
 }
-.result span{
 
- color: red;
+.result span {
+
+    color: red;
     font-weight: bold;
     font-size: x-large;
 }
-.health{
+
+.health {
     font-size: larger;
     margin: 30px 5%;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.result span {
+    display: inline-block;
+    transition: 0.3s ease;
+    transform-origin: center;
+    opacity: 1;
+}
+
+.result span.animate {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
 
 @media screen and (max-width:760px) {
-  .height , .weight{
+
+    .height,
+    .weight {
         font-size: small;
     }
-    .calculate{
+
+    .calculate {
         width: 30vw;
     }
-    
-}
-@media screen and (max-width:560px){
-    .inputs{
-        display: grid;
-        align-items: center;
-        justify-content: center;
+
+    .calculate:active {
+        width: 30vw;
+        width: calc(30vw - 1vw);
     }
-   .height , .weight{
-    width: 100%;
-   }
+
+    .themes {
+        top: 10px;
+    }
+
+}
+
+@media screen and (max-width:560px) {
+    h1 {
+        font-size: 40px;
+
+    }
+
+    .inputs {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .height,
+    .weight {
+        font-size: small;
+        width: 70vw;
+        margin: auto;
+        margin: 0px auto 20px auto;
+    }
+
+    .calculate {
+        margin-top: 10px;
+        width: 50vw;
+    }
+
+    .calculate:active {
+
+        width: 49vw;
+    }
 }
