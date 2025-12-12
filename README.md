@@ -40,6 +40,9 @@ Works on all device sizes.
 
 ---
 
+## 🔗 Live Demo  
+[Click here to view the project](https://krrishsharma12.github.io/BMI-Calculator/)
+
 ## 📁 Project Structure
 
 📁 BMI-Calculator
